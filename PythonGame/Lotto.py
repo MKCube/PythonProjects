@@ -17,6 +17,7 @@ def lotto() -> None:
 
     print("Wylosowane liczby:", liczby)
 
+
 def loop() -> None:
     question = input("""Czy chcesz powtórzyć losowanie? "tak" "lub" "nie" """)
     if question == "tak":
@@ -26,10 +27,11 @@ def loop() -> None:
 
     while question:
         if question == "nie":
-            question == True
+            question = True
             quit()
         else:
             loop()
+
 
 lotto()
 loop()
