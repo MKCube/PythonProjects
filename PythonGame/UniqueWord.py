@@ -10,5 +10,3 @@ for slowo in lista:
     if slowo not in unikalne_slowa:
         unikalne_slowa.append(slowo)
 print(unikalne_slowa)
-
-

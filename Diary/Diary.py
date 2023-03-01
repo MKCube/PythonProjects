@@ -7,7 +7,7 @@ class DiaryEntry:
 
     def __init__(self, file_name, data_post, post_id, text_post):
         self.file_name = file_name
-        self.localdir = 'C:\\Users\\kostk\\PycharmProjects\\Diary'
+        self.localdir = 'C:\\Users\\kostk\\PythonProjects\\Diary'
         self.filepath = os.path.join(self.localdir, self.file_name)
         self.data = data_post
         self.id = post_id
