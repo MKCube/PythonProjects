@@ -4,8 +4,3 @@ class BonusTask:
 
     def print_bonus_quest(self) -> None:
         print(self.message)
-
-
-
-
-

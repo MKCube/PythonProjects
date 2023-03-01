@@ -48,21 +48,21 @@ class Player(CharacterBase, ABC):
 
 def main():
     bow = Item("MagicBow", 15, 350000, 50, [70, 20, 5])
-    wand = Item("Staff", 10, 8780000, 40, [88, 34, 40])
+    magic = Item("Spell", 10, 8780000, 40, [88, 34, 40])
     hands = Item("Hands", 1, 30, 1, [15, 2, 1])
-    sword = Item("Aerondight", 25, 440600, 66, [100, 50, 16])
+    sword = Item("Anduril", 25, 440600, 66, [100, 50, 16])
 
     legolas = Player.Elf("Legolas", "Elf", 150, 50, 200, True)
     legolas.create_items_list([bow])
 
     gandalf = Player.Wizard("Gandalf", "Wizard", 100, 250, 100, True)
-    gandalf.create_items_list([wand, sword])
+    gandalf.create_items_list([magic])
 
     smigol = Player.Creature("Gollum", "Creature", 50, 20, 100, False)
     smigol.create_items_list([hands])
 
     aragorn = Player.Man("Aragorn", "Man", 170, 15, 300, False)
-    aragorn.create_items_list([sword, bow])
+    aragorn.create_items_list([sword])
 
     legolas.who_are_you()
     gandalf.who_are_you()

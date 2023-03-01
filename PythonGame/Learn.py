@@ -1,26 +1,28 @@
-"""def add(a, b):
+"""
+# Dodawanie
+def add(a, b):
  print(f'First sign is: {a}', f'Second sign is: {b}')
  total = a + b
  print(f'Score is: {total}')
 
-
+# Wyświetlanie zasięgu
 def print_range(a, b):
  for i in range(a, b, +1):
  print(i)
 
-
+# Wyświetlenie gwiazdek
 def print_star(num):
  stars = ""
  for i in range(num):
  stars += "*"
  print(stars)
 
-
+# Rysowanie kwadratu
 def print_square(size):
  for i in range(size):
  print_star(size)
 
-
+# Rysowanie trójkąta
 def print_triangle(size):
  for i in range(size):
  print_star(i+1)
@@ -33,17 +35,17 @@ print_square(6)
 print_triangle(3)
 
 
-
+# Przeliczenie dni na milisekudny
 def days_to_millisecond(days):
 # 24000 - bo 1 milisek to 1000 sek, a 24 to ilość godzin w dniu
 # 3600 - bo 60 min ma godzina, a min ma 60 sek
  return days * 24000 * 3600
 
-
+# Obliczanie pola trójkąta prostokątnego
 def square_triangle_area(a, b):
  return a * b / 2
 
-
+# Porównywanie
 def biggest(a, b, c):
  if a >= b and a >= c:
  return a
@@ -52,7 +54,7 @@ def biggest(a, b, c):
  else:
  return c
 
-
+# Suma
 def sum_range(a, b):
  res = 0
  for i in range(a, b):
