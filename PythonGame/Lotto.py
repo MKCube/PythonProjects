@@ -1,37 +1,40 @@
 import random
 
 
-def lotto() -> None:
-    ileliczb = int(input("Podaj ilość typowanych liczb: "))
-    maksliczba = int(input("Podaj maksymalną losowaną liczbę: "))
+class Hazard:
 
-    liczby = []
+    @staticmethod
+    def lotto() -> None:
+        ileliczb = int(input("Podaj ilość typowanych liczb: "))
+        maksliczba = int(input("Podaj maksymalną losowaną liczbę: "))
 
-    i = 0
+        liczby = []
 
-    while i < ileliczb:
-        liczba = random.randint(1, maksliczba)
-        if liczby.count(liczba) == 0:
-            liczby.append(liczba)
-            i = i + 1
+        i = 0
 
-    print("Wylosowane liczby:", liczby)
+        while i < ileliczb:
+            liczba = random.randint(1, maksliczba)
+            if liczby.count(liczba) == 0:
+                liczby.append(liczba)
+                i = i + 1
 
+        print("Wylosowane liczby:", liczby)
 
-def loop() -> None:
-    question = input("""Czy chcesz powtórzyć losowanie? "tak" "lub" "nie" """)
-    if question == "tak":
-        lotto()
-    else:
-        print("Dziękujemy za udział")
-
-    while question:
-        if question == "nie":
-            question = True
-            quit()
+    def loop(self) -> None:
+        question = input("""Czy chcesz powtórzyć losowanie? "tak" "lub" "nie" """)
+        if question == "tak":
+            self.lotto()
         else:
-            loop()
+            print("Dziękujemy za udział")
+
+        while question:
+            if question == "nie":
+                question = True
+                quit()
+            else:
+                self.loop()
 
 
-lotto()
-loop()
+hazard = Hazard()
+hazard.lotto()
+hazard.loop()
