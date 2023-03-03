@@ -154,3 +154,29 @@ for name in names:
 print(len_names)
 
 """
+
+
+class Money:
+    def __init__(self, amount, currency):
+        self.amount = amount
+        self.currency = currency
+
+    def __eq__(self, other):
+        return isinstance(other, Money) and other.amount == self.amount and other.currency == self.currency
+
+    def __str__(self):
+        return f"{self.amount} {self.currency}"
+
+    def __repr__(self):
+        return "Money (' + f'amount = {repr(self.amount)}, ' + f'currency = {repr(self.currency)})"
+
+
+money1 = Money(10.0, "PLN")
+money2 = Money(10.0, "PLN")
+money3 = Money(20.0, "PLN")
+money4 = Money(10.0, "EUR")
+
+print(money1 == money1)
+print(money1 == money2)
+print(money1 == money3)
+print(money1 == money4)
